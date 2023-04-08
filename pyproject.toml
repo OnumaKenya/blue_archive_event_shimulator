@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "blue-archive-event_shimulator"
+version = "0.1.0"
+description = ""
+authors = ["OnumaKenya <kenyaonuma@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.10"
+pandas = "^1.5.2"
+numpy = "^1.24.0"
+streamlit = "^1.16.0"
+streamlit-aggrid = "^0.3.3"
+ortools = "^9.4.1874"
+
+[tool.poetry.dev-dependencies]
+pysen = "^0.10.2"
+black = "^22.12.0"
+flake8 = "^6.0.0"
+isort = "^5.11.4"
+mypy = "^0.991"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pysen]
+version = "0.10"
+
+[tool.pysen.lint]
+enable_black = true
+enable_flake8 = true
+enable_isort = true
+enable_mypy = false
+line_length = 210
+py_version = "py310"
+[[tool.pysen.lint.mypy_targets]]
+  paths = ["."]
